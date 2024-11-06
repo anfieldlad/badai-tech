@@ -89,6 +89,15 @@
             padding: 20px;
             text-align: center;
         }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -123,6 +132,14 @@
         <h3>API Integration</h3>
         <p>Flexible API solutions for easy deployment.</p>
     </div>
+    <div class="card">
+        <h3>Fine-tuning LLM</h3>
+        <p>Optimize LLMs for specific tasks and domains with fine-tuning capabilities.</p>
+    </div>
+    <div class="card">
+        <h3>RAG (Retrieval-Augmented Generation)</h3>
+        <p>Combine retrieval and generation models for high-quality, contextual responses.</p>
+    </div>
 </section>
 
 <!-- Use Cases Section -->
@@ -151,6 +168,7 @@
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <h2 class="section-title">Get in Touch</h2>
+    <p>For inquiries, feel free to reach us at <a href="mailto:bobby@dioriza.com">bobby@dioriza.com</a> or fill out the form below:</p>
     <form>
         <input type="text" name="name" placeholder="Name" required>
         <input type="email" name="email" placeholder="Email" required>
@@ -162,7 +180,7 @@
 
 <!-- Footer -->
 <footer class="footer">
-    &copy; 2024 badai.tech. All rights reserved.
+    &copy; 2024 badai.tech. All rights reserved. | Contact: <a href="mailto:bobby@dioriza.com" style="color: #4CAF50;">bobby@dioriza.com</a>
 </footer>
 
 <script>
