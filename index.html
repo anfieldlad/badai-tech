@@ -4,126 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>badai.tech - AI Solutions</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Tambahkan favicon -->
     <style>
-    /* Basic Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        font-family: Arial, sans-serif;
-        color: #333;
-        line-height: 1.6;
-    }
-    header, section {
-        padding: 50px 20px;
-        text-align: center;
-    }
-    nav {
-        background: #333;
-        color: #fff;
-        padding: 10px 0;
-        position: sticky;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-    }
-    nav a:hover {
-        color: #4CAF50;
-    }
-    .hero {
-        background: linear-gradient(to right, #4CAF50, #43A047);
-        color: white;
-        padding: 100px 20px;
-    }
-    .hero h1 {
-        font-size: 2.5em;
-    }
-    .services, .use-cases, .about, .contact {
-        background: #f4f4f4;
-        margin: 20px 0;
-    }
-    .section-title {
-        font-size: 2em;
-        margin-bottom: 20px;
-        color: #333;
-    }
-    /* Card Styles */
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        justify-content: center; /* Center-align the cards */
-        align-items: start; /* Align items at the start of each cell */
-    }
-    .card {
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: left;
-        padding: 20px;
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 250px; /* Konsistensi tinggi minimum */
-        max-height: 300px; /* Batas tinggi maksimal */
-    }
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-    .card h3 {
-        font-size: 1.4em;
-        color: #333;
-        margin-bottom: 10px;
-    }
-    /* Contact Form */
-    .contact form {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .contact input, .contact textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
-    .contact button {
-        padding: 10px 20px;
-        background: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .footer {
-        background: #333;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2em;
+        /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        header, section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .hero {
+            background: #4CAF50;
+            color: white;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        .services, .use-cases, .about, .contact {
+            background: #f4f4f4;
+            margin: 20px 0;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .card {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -145,45 +121,41 @@
 <!-- Services Section -->
 <section id="services" class="services">
     <h2 class="section-title">Our Services</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>LLM Wrapper Solutions</h3>
-            <p>Customizable LLM wrappers for various applications, enabling quick integration of AI into your systems.</p>
-        </div>
-        <div class="card">
-            <h3>Custom Chatbots</h3>
-            <p>AI-powered chatbots tailored to your unique needs, including fine-tuning and Retrieval-Augmented Generation (RAG) for enhanced, context-aware conversations.</p>
-        </div>
-        <div class="card">
-            <h3>API Integration</h3>
-            <p>Flexible API solutions for easy deployment, ensuring seamless connectivity across your platforms.</p>
-        </div>
+    <div class="card">
+        <h3>LLM Wrapper Solutions</h3>
+        <p>Customizable LLM wrappers for various applications, enabling quick integration of AI into your systems.</p>
+    </div>
+    <div class="card">
+        <h3>Custom Chatbots</h3>
+        <p>AI-powered chatbots tailored to your unique needs, including fine-tuning and Retrieval-Augmented Generation (RAG) for enhanced, context-aware conversations.</p>
+    </div>
+    <div class="card">
+        <h3>API Integration</h3>
+        <p>Flexible API solutions for easy deployment, ensuring seamless connectivity across your platforms.</p>
     </div>
 </section>
 
 <!-- Use Cases Section -->
 <section id="use-cases" class="use-cases">
     <h2 class="section-title">Use Cases</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Customer Support Chatbots</h3>
-            <p>Reduce response times and improve customer satisfaction with AI-driven support.</p>
-        </div>
-        <div class="card">
-            <h3>Virtual Assistants</h3>
-            <p>Enable automated task management and productivity tools for streamlined operations.</p>
-        </div>
-        <div class="card">
-            <h3>Content Generation</h3>
-            <p>Generate high-quality, consistent content at scale with AI-powered writing assistance.</p>
-        </div>
+    <div class="card">
+        <h3>Customer Support Chatbots</h3>
+        <p>Reduce response times and improve customer satisfaction with AI-driven support.</p>
+    </div>
+    <div class="card">
+        <h3>Virtual Assistants</h3>
+        <p>Enable automated task management and productivity tools for streamlined operations.</p>
+    </div>
+    <div class="card">
+        <h3>Content Generation</h3>
+        <p>Generate high-quality, consistent content at scale with AI-powered writing assistance.</p>
     </div>
 </section>
 
 <!-- About Us Section -->
 <section id="about" class="about">
     <h2 class="section-title">About Us</h2>
-    <p>Badai.tech was established to bring the power of AI into businesses in a way that's accessible, effective, and transformative. With a focus on AI solutions like LLM wrappers and custom chatbots, we help organizations harness the best in technology to improve productivity, customer engagement, and overall operational efficiency. Our mission is to bridge the gap between cutting-edge AI and everyday business needs, making AI adoption smooth and impactful.</p>
+    <p>BAD AI technology aims to bridge the gap between businesses and advanced AI technology, making every interaction intelligent and impactful.</p>
 </section>
 
 <!-- Contact Section -->
