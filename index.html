@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAD AI - AI Solutions</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> <!-- Tambahkan font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
     <style>
         /* Basic Styles */
         * {
@@ -14,12 +14,12 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', Arial, sans-serif; /* Gunakan font Poppins */
+            font-family: 'Poppins', Arial, sans-serif;
             color: #333;
             line-height: 1.6;
         }
         h1, h2, h3 {
-            font-family: 'Raleway', Arial, sans-serif; /* Gunakan font Raleway untuk heading */
+            font-family: 'Raleway', Arial, sans-serif;
         }
         header, section {
             padding: 50px 20px;
@@ -38,8 +38,7 @@
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
-            font-weight: 600; /* Memberikan bobot lebih untuk link */
-            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
         }
         nav a:hover {
             color: #4CAF50;
@@ -52,7 +51,7 @@
         .hero h1 {
             font-size: 2.5em;
         }
-        .services, .use-cases, .about, .contact {
+        .services, .use-cases, .about, .contact, .portfolio {
             background: #f4f4f4;
             margin: 20px 0;
         }
@@ -69,7 +68,33 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .portfolio-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+        }
+        .portfolio-card h3 {
+            margin: 15px 0;
+            color: #333;
+        }
+        .portfolio-card a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .portfolio-card a:hover {
+            text-decoration: underline;
         }
         .contact form {
             max-width: 500px;
@@ -98,7 +123,7 @@
         }
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .card {
+            .card, .portfolio-card {
                 width: 100%;
             }
             .hero h1 {
@@ -114,6 +139,7 @@
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#use-cases">Use Cases</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -141,32 +167,29 @@
     </div>
 </section>
 
-<!-- Use Cases Section -->
-<section id="use-cases" class="use-cases">
-    <h2 class="section-title">Use Cases</h2>
-    <div class="card">
-        <h3>Customer Support Chatbots</h3>
-        <p>Reduce response times and improve customer satisfaction with AI-driven support.</p>
-    </div>
-    <div class="card">
-        <h3>Virtual Assistants</h3>
-        <p>Enable automated task management and productivity tools for streamlined operations.</p>
-    </div>
-    <div class="card">
-        <h3>Content Generation</h3>
-        <p>Generate high-quality, consistent content at scale with AI-powered writing assistance.</p>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <h2 class="section-title">Our Portfolio</h2>
+    <div class="portfolio-container">
+        <!-- RAG Chatbot Project -->
+        <div class="portfolio-card">
+            <h3>RAG Chatbot</h3>
+            <p>Explore our advanced Retrieval-Augmented Generation (RAG) chatbot designed for intelligent and context-aware conversations.</p>
+            <a href="https://rag-chatbot.badai.tech/" target="_blank">Visit Project</a>
+        </div>
+        <!-- Multimodal Chatbot Project -->
+        <div class="portfolio-card">
+            <h3>Multimodal Chatbot</h3>
+            <p>Discover our cutting-edge multimodal chatbot that integrates various data types for enhanced interaction.</p>
+            <a href="https://multimodal-chatbot.badai.tech/" target="_blank">Visit Project</a>
+        </div>
     </div>
 </section>
 
 <!-- About Us Section -->
 <section id="about" class="about">
     <h2 class="section-title">About Us</h2>
-    <p>BAD AI technology aims to bridge the gap between businesses and advanced AI technology, making every interaction intelligent and impactful. We specialize in developing state-of-the-art AI solutions such as chatbots and LLM wrappers.</p>
-    <h3 class="section-subtitle">Our Portfolio</h3>
-    <ul style="list-style-type: none; padding: 0;">
-        <li><a href="https://rag-chatbot.badai.tech/" target="_blank">RAG Chatbot Portfolio</a></li>
-        <li><a href="https://multimodal-chatbot.badai.tech/" target="_blank">Multimodal Chatbot Portfolio</a></li>
-    </ul>
+    <p>BAD AI technology aims to bridge the gap between businesses and advanced AI technology, making every interaction intelligent and impactful.</p>
 </section>
 
 <!-- Contact Section -->
