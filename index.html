@@ -1,195 +1,155 @@
-/*
-  BAD.AI Website (Next.js + Tailwind + shadcn/ui)
-  - Assumes you have a Next.js project set up with Tailwind CSS and shadcn/ui installed.
-  - File: pages/index.tsx
-*/
-
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { motion } from 'framer-motion'
-
-export default function Home() {
-  return (
-    <div className="font-sans text-gray-800">
-      <NavBar />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <About />
-      <Contact />
-      <Footer />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAD.AI - AI Solutions</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Raleway', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+  <!-- Navigation -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-green-600">BAD.AI</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-green-500">Home</a>
+        <a href="#services" class="hover:text-green-500">Services</a>
+        <a href="#portfolio" class="hover:text-green-500">Portfolio</a>
+        <a href="#about" class="hover:text-green-500">About</a>
+        <a href="#contact" class="hover:text-green-500">Contact</a>
+      </div>
+      <button class="md:hidden text-gray-700 focus:outline-none" id="nav-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-  )
-}
+    <div class="hidden md:hidden" id="nav-menu">
+      <a href="#home" class="block px-6 py-2 hover:bg-gray-100">Home</a>
+      <a href="#services" class="block px-6 py-2 hover:bg-gray-100">Services</a>
+      <a href="#portfolio" class="block px-6 py-2 hover:bg-gray-100">Portfolio</a>
+      <a href="#about" class="block px-6 py-2 hover:bg-gray-100">About</a>
+      <a href="#contact" class="block px-6 py-2 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
 
-function NavBar() {
-  return (
-    <nav className="bg-gray-900 text-white sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        <div className="text-xl font-bold">BAD.AI</div>
-        <div className="space-x-6">
-          {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map(section => (
-            <a key={section} href={`#${section.toLowerCase()}`} className="hover:text-green-400 font-semibold">
-              {section}
-            </a>
-          ))}
+  <!-- Hero Section -->
+  <section id="home" class="bg-green-600 text-white text-center py-32">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">BAD AI untuk Solusi AI yang Badai!</h1>
+    <p class="text-lg md:text-2xl mb-8">Empowering Your Business with Intelligent AI Solutions</p>
+    <a href="#contact" class="inline-block px-8 py-3 bg-white text-green-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+      Get in Touch
+    </a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold mb-3">LLM Wrapper Solutions</h3>
+          <p class="text-gray-600">Customizable LLM wrappers for quick AI integration into your systems.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold mb-3">Custom Chatbots</h3>
+          <p class="text-gray-600">Fine-tuned, context-aware chatbots with RAG for smarter conversations.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold mb-3">API Integration</h3>
+          <p class="text-gray-600">Robust API solutions for seamless connectivity across platforms.</p>
         </div>
       </div>
-    </nav>
-  )
-}
+    </div>
+  </section>
 
-function Hero() {
-  return (
-    <section id="home" className="bg-green-500 text-white text-center py-32">
-      <motion.h1
-        className="text-4xl md:text-6xl font-extrabold mb-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        BAD AI untuk Solusi AI yang Badai!
-      </motion.h1>
-      <motion.p
-        className="text-lg md:text-xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        Empowering Your Business with Intelligent AI Solutions
-      </motion.p>
-      <Button size="lg" className="mt-8">
-        Get in Touch
-      </Button>
-    </section>
-  )
-}
-
-function Services() {
-  const items = [
-    {
-      title: 'LLM Wrapper Solutions',
-      desc: 'Customizable LLM wrappers for quick AI integration into your systems.'
-    },
-    {
-      title: 'Custom Chatbots',
-      desc: 'Fine-tuned, context-aware chatbots with RAG for smarter conversations.'
-    },
-    {
-      title: 'API Integration',
-      desc: 'Robust API solutions for seamless connectivity across platforms.'
-    }
-  ]
-
-  return (
-    <section id="services" className="bg-gray-100 py-20 text-center">
-      <h2 className="text-3xl font-bold mb-10">Our Services</h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-        {items.map(item => (
-          <Card key={item.title} className="p-6">
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
-            </CardContent>
-          </Card>
-        ))}
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">Our Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">RAG Chatbot</h3>
+          <p class="text-gray-600 mb-4">Advanced Retrieval-Augmented Generation for intelligent, context-aware conversations.</p>
+          <a href="https://rag-chatbot.badai.tech/" target="_blank" class="text-green-600 font-semibold hover:underline">Visit Project</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Customer Service Chatbot</h3>
+          <p class="text-gray-600 mb-4">Integrates diverse data for enhanced customer interactions.</p>
+          <a href="https://cs-chatbot.badai.tech/" target="_blank" class="text-green-600 font-semibold hover:underline">Visit Project</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Custom GPT</h3>
+          <p class="text-gray-600 mb-4">Bespoke GPT solutions for personalized interactions.</p>
+          <a href="https://chatgpt.com/g/g-Lq0ch3IpR-mulyono" target="_blank" class="text-green-600 font-semibold hover:underline">Visit Project</a>
+        </div>
       </div>
-    </section>
-  )
-}
+    </div>
+  </section>
 
-function Portfolio() {
-  const projects = [
-    {
-      name: 'RAG Chatbot',
-      desc: 'Advanced Retrieval-Augmented Generation for intelligent, context-aware conversations.',
-      url: 'https://rag-chatbot.badai.tech/'
-    },
-    {
-      name: 'Customer Service Chatbot',
-      desc: 'Integrates diverse data for enhanced customer interactions.',
-      url: 'https://cs-chatbot.badai.tech/'
-    },
-    {
-      name: 'Custom GPT',
-      desc: 'Bespoke GPT solutions for personalized interactions.',
-      url: 'https://chatgpt.com/g/g-Lq0ch3IpR-mulyono'
-    }
-  ]
-
-  return (
-    <section id="portfolio" className="py-20 text-center">
-      <h2 className="text-3xl font-bold mb-10">Our Portfolio</h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-        {projects.map(proj => (
-          <Card key={proj.name} className="p-6">
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-2">{proj.name}</h3>
-              <p className="text-gray-600 mb-4">{proj.desc}</p>
-              <a href={proj.url} target="_blank" rel="noopener noreferrer">
-                <Button variant="link">Visit Project</Button>
-              </a>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-function About() {
-  return (
-    <section id="about" className="bg-gray-100 py-20 text-center px-6">
-      <h2 className="text-3xl font-bold mb-6">About Us</h2>
-      <p className="max-w-2xl mx-auto text-gray-700">
-        BAD AI technology bridges the gap between businesses and advanced AI,
-        making every interaction intelligent and impactful.
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        BAD AI technology bridges the gap between businesses and advanced AI, making every interaction intelligent and impactful.
       </p>
-    </section>
-  )
-}
+    </div>
+  </section>
 
-function Contact() {
-  return (
-    <section id="contact" className="py-20 text-center px-6">
-      <h2 className="text-3xl font-bold mb-6">Get in Touch</n      >
-      <p className="text-gray-700 mb-8">
-        Reach us at <a className="text-green-500 font-semibold" href="mailto:bobby@dioriza.com">bobby@dioriza.com</a>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="text-gray-700 mb-8">
+        Reach us at <a href="mailto:bobby@dioriza.com" class="text-green-600 font-semibold">bobby@dioriza.com</a>
       </p>
-      <form className="max-w-xl mx-auto space-y-4">
+      <form class="max-w-xl mx-auto space-y-4">
         <div>
-          <Label htmlFor="name">Name</Label>
-          <Input id="name" type="text" placeholder="Your name" />
+          <label for="name" class="block text-left mb-1 font-medium">Name</label>
+          <input id="name" type="text" placeholder="Your name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
         </div>
         <div>
-          <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="Your email" />
+          <label for="email" class="block text-left mb-1 font-medium">Email</label>
+          <input id="email" type="email" placeholder="Your email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
         </div>
         <div>
-          <Label htmlFor="company">Company (optional)</Label>
-          <Input id="company" type="text" placeholder="Your company" />
+          <label for="company" class="block text-left mb-1 font-medium">Company (optional)</label>
+          <input id="company" type="text" placeholder="Your company" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
         </div>
         <div>
-          <Label htmlFor="message">Message</Label>
-          <Textarea id="message" rows={5} placeholder="Your message" />
+          <label for="message" class="block text-left mb-1 font-medium">Message</label>
+          <textarea id="message" rows="5" placeholder="Your message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
         </div>
-        <Button type="submit" className="mt-4">Send Message</Button>
+        <button type="submit" class="w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition">Send Message</button>
       </form>
-    </section>
-  )
-}
+    </div>
+  </section>
 
-function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white py-6 text-center">
-      <p>&copy; {new Date().getFullYear()} badai.tech. All rights reserved.</p>
-      <p>
-        Contact: <a href="mailto:bobby@dioriza.com" className="text-green-400">bobby@dioriza.com</a>
-      </p>
-    </footer>
-  )
-}
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2024 BAD.AI. All rights reserved.</p>
+    <p>Contact: <a href="mailto:bobby@dioriza.com" class="text-green-400">bobby@dioriza.com</a></p>
+  </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
