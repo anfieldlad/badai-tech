@@ -84,7 +84,7 @@
 
         <nav class="hidden md:flex items-center gap-8">
           <a href="#services" class="nav-link">Services</a>
-          <a href="#stack" class="nav-link">Approach</a>
+          <a href="#stack" class="nav-link">Stack</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="portfolio.html" class="nav-link">Portfolio</a>
         </nav>
@@ -109,7 +109,7 @@
 
       <div x-show="mobileMenuOpen" x-collapse class="md:hidden border-t border-ink/5 py-4 space-y-1">
         <a href="#services" @click="mobileMenuOpen=false" class="block px-2 py-2 nav-link">Services</a>
-        <a href="#stack" @click="mobileMenuOpen=false" class="block px-2 py-2 nav-link">Approach</a>
+        <a href="#stack" @click="mobileMenuOpen=false" class="block px-2 py-2 nav-link">Stack</a>
         <a href="#contact" @click="mobileMenuOpen=false" class="block px-2 py-2 nav-link">Contact</a>
         <a href="portfolio.html" @click="mobileMenuOpen=false" class="block px-2 py-2 nav-link">Portfolio</a>
         <a href="mailto:bobby@dioriza.com"
@@ -294,7 +294,7 @@
           Three storms.<br>One partner.
         </h2>
         <p class="mt-5 text-ink/60 text-lg">
-          Custom-built, production-grade — not demos. Engage us on one, or let us wire all three together.
+          Custom-built and production-grade. Engage us on one, or let us wire all three together.
         </p>
       </div>
 
@@ -308,7 +308,7 @@
           <h3 class="font-sans font-extrabold text-ink text-2xl tracking-tight mb-3">Knowledge Storm</h3>
           <p class="text-ink/60 text-sm leading-relaxed mb-6 flex-grow">
             Retrieval-augmented chatbots grounded in your private corpus.
-            Cited answers, no hallucinations, deployed inside your VPC.
+            Cited answers that minimize hallucination, deployed inside your VPC.
           </p>
           <ul class="space-y-2 font-mono text-[12px] text-ink/70 mb-8">
             <li>→ private data, never trained on</li>
@@ -334,7 +334,7 @@
           <ul class="space-y-2 font-mono text-[12px] text-ink/70 mb-8">
             <li>→ context-aware, not just OCR</li>
             <li>→ schema-locked output</li>
-            <li>→ 98%+ field accuracy</li>
+            <li>→ 98%+ field accuracy on IDs</li>
           </ul>
           <a href="portfolio.html#core" class="btn-mono inline-flex items-center gap-2 text-ink hover:gap-3 transition-all">
             see it live <span>→</span>
@@ -349,11 +349,11 @@
           </div>
           <h3 class="font-sans font-extrabold text-ink text-2xl tracking-tight mb-3">Automation Storm</h3>
           <p class="text-ink/60 text-sm leading-relaxed mb-6 flex-grow">
-            Agentic workflows that touch the real world: scrape, summarize,
+            Automation and agents that touch the real world: scrape, summarize,
             post to Slack, write to your CRM. End-to-end, 24/7.
           </p>
           <ul class="space-y-2 font-mono text-[12px] text-ink/70 mb-8">
-            <li>→ n8n & OpenClaw native</li>
+            <li>→ n8n, OpenClaw & Hermes</li>
             <li>→ tool-use with guardrails</li>
             <li>→ observable, replayable runs</li>
           </ul>
@@ -375,39 +375,47 @@
             Boring on the<br>outside.<br>Sharp inside.
           </h2>
           <p class="mt-6 text-ink/60 text-lg max-w-md">
-            We deliberately picked tools that are battle-tested in production. No bleeding-edge
-            betas in the critical path — just LLMs doing real work.
+            Cutting-edge agents on a boring, reliable core. The model and data layers are
+            battle-tested in production; the agent layer is where we move fast — new capability,
+            without betting your critical path on it.
           </p>
         </div>
 
         <dl class="space-y-px bg-ink/10 border border-ink/10 rounded-xl overflow-hidden">
           <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
             <div>
-              <dt class="font-sans font-bold text-ink">Orchestration</dt>
-              <dd class="font-mono text-[12px] text-ink/50 mt-1">langchain · custom wrappers</dd>
+              <dt class="font-sans font-bold text-ink">Agentic execution</dt>
+              <dd class="font-mono text-[12px] text-ink/50 mt-1">openclaw · hermes</dd>
             </div>
             <span class="font-mono text-[11px] text-ink/40">/01</span>
-          </div>
-          <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
-            <div>
-              <dt class="font-sans font-bold text-ink">Vector store</dt>
-              <dd class="font-mono text-[12px] text-ink/50 mt-1">mongodb atlas · on-prem qdrant</dd>
-            </div>
-            <span class="font-mono text-[11px] text-ink/40">/02</span>
-          </div>
-          <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
-            <div>
-              <dt class="font-sans font-bold text-ink">Automation</dt>
-              <dd class="font-mono text-[12px] text-ink/50 mt-1">n8n · openclaw · python agents</dd>
-            </div>
-            <span class="font-mono text-[11px] text-ink/40">/03</span>
           </div>
           <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
             <div>
               <dt class="font-sans font-bold text-ink">Models</dt>
               <dd class="font-mono text-[12px] text-ink/50 mt-1">claude · gpt · gemini · oss</dd>
             </div>
+            <span class="font-mono text-[11px] text-ink/40">/02</span>
+          </div>
+          <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
+            <div>
+              <dt class="font-sans font-bold text-ink">LLM layer</dt>
+              <dd class="font-mono text-[12px] text-ink/50 mt-1">langchain · custom wrappers</dd>
+            </div>
+            <span class="font-mono text-[11px] text-ink/40">/03</span>
+          </div>
+          <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
+            <div>
+              <dt class="font-sans font-bold text-ink">Vector store</dt>
+              <dd class="font-mono text-[12px] text-ink/50 mt-1">mongodb atlas · qdrant · postgres pgvector</dd>
+            </div>
             <span class="font-mono text-[11px] text-ink/40">/04</span>
+          </div>
+          <div class="bg-white px-6 py-5 flex items-center justify-between gap-6">
+            <div>
+              <dt class="font-sans font-bold text-ink">Workflow automation</dt>
+              <dd class="font-mono text-[12px] text-ink/50 mt-1">n8n · python</dd>
+            </div>
+            <span class="font-mono text-[11px] text-ink/40">/05</span>
           </div>
         </dl>
       </div>
@@ -486,7 +494,7 @@
           Ready to ship<br>something real?
         </h2>
         <p class="mt-6 text-paper/60 text-lg max-w-lg">
-          Send us a line about what you're building. We'll reply with a working plan —
+          Send us a line about what you're building. We'll reply with a clear next step —
           no slide decks, promise.
         </p>
 
