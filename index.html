@@ -153,15 +153,15 @@
             and agentic automation, wired into the way your business actually works.
           </p>
 
-          <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <a href="mailto:bobby@dioriza.com"
-              class="btn-mono inline-flex items-center justify-center gap-2 px-6 py-4 bg-ink text-paper rounded-md
+              class="btn-mono w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 bg-ink text-paper rounded-md
                      hover:bg-ink/85 transition shadow-[0_8px_24px_-8px_rgba(10,10,10,0.4)]">
               $ get in touch
               <span aria-hidden="true">→</span>
             </a>
             <a href="#services"
-              class="btn-mono inline-flex items-center justify-center gap-2 px-6 py-4 bg-white text-ink rounded-md
+              class="btn-mono w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 bg-white text-ink rounded-md
                      border border-ink/15 hover:border-ink/40 transition">
               see what we do
             </a>
@@ -188,7 +188,7 @@
               </div>
 
               <!-- Conversation -->
-              <div class="p-5 space-y-4">
+              <div class="p-4 sm:p-5 space-y-4">
                 <!-- User msg -->
                 <div class="flex items-start gap-3">
                   <span class="mt-0.5 w-7 h-7 rounded-full bg-ink/5 border border-ink/10 flex items-center justify-center font-mono text-[11px] text-ink/70">U</span>
@@ -211,36 +211,28 @@
 
                     <!-- tool calls -->
                     <div class="space-y-2 mb-3">
-                      <div class="font-mono text-[12px] text-ink/70 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        <span class="text-ink/50">tool</span>
-                        <span class="text-ink">crawl.idx(</span>
-                        <span class="text-ink/60">"ownership &gt; 1%"</span>
-                        <span class="text-ink">)</span>
+                      <div class="font-mono text-[11px] sm:text-[12px] text-ink/70 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span class="text-ink/50 shrink-0">tool</span>
+                        <span class="text-ink flex-1 min-w-0 truncate">crawl.idx(<span class="text-ink/60">"ownership &gt; 1%"</span>)</span>
                       </div>
-                      <div class="font-mono text-[12px] text-ink/70 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        <span class="text-ink/50">tool</span>
-                        <span class="text-ink">pdf.parse(</span>
-                        <span class="text-ink/60">"disclosures/*.pdf"</span>
-                        <span class="text-ink">)</span>
+                      <div class="font-mono text-[11px] sm:text-[12px] text-ink/70 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span class="text-ink/50 shrink-0">tool</span>
+                        <span class="text-ink flex-1 min-w-0 truncate">pdf.parse(<span class="text-ink/60">"disclosures/*.pdf"</span>)</span>
                       </div>
-                      <div class="font-mono text-[12px] text-ink/70 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        <span class="text-ink/50">tool</span>
-                        <span class="text-ink">data.update(</span>
-                        <span class="text-ink/60">"holdings"</span>
-                        <span class="text-ink">)</span>
+                      <div class="font-mono text-[11px] sm:text-[12px] text-ink/70 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span class="text-ink/50 shrink-0">tool</span>
+                        <span class="text-ink flex-1 min-w-0 truncate">data.update(<span class="text-ink/60">"holdings"</span>)</span>
                       </div>
-                      <div class="font-mono text-[12px] text-ink/70 flex items-center gap-2">
-                        <span class="relative flex h-1.5 w-1.5">
+                      <div class="font-mono text-[11px] sm:text-[12px] text-ink/70 flex items-center gap-2">
+                        <span class="relative flex h-1.5 w-1.5 shrink-0">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                           <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
                         </span>
-                        <span class="text-ink/50">tool</span>
-                        <span class="text-ink">deploy(</span>
-                        <span class="text-ink/60">"ihsg.badai.tech"</span>
-                        <span class="text-ink">)</span>
+                        <span class="text-ink/50 shrink-0">tool</span>
+                        <span class="text-ink flex-1 min-w-0 truncate">deploy(<span class="text-ink/60">"ihsg.badai.tech"</span>)</span>
                       </div>
                     </div>
 
@@ -529,6 +521,7 @@
         © <span x-data="{ y: new Date().getFullYear() }" x-text="y"></span> bad.ai · custom AI, built to storm
       </p>
       <div class="flex items-center gap-5 font-mono text-[11px] uppercase tracking-tight text-ink/50">
+        <a href="https://bobby.dioriza.com" target="_blank" rel="noopener" class="hover:text-ink"><span class="font-bold text-ink">b</span>obby <span class="font-bold text-ink">a</span>nanta <span class="font-bold text-ink">d</span>ioriza</a>
         <a href="https://github.com/anfieldlad" target="_blank" rel="noopener" class="hover:text-ink">github</a>
       </div>
     </div>
