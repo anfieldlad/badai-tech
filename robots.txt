@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://badai.tech/sitemap.xml
+Sitemap: https://bad.ai.id/sitemap.xml

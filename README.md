@@ -2,7 +2,7 @@
 
 Marketing site and portfolio for **BAD.AI** — an AI consultancy. _BAD.AI_ is pronounced **badai**, Indonesian for **"storm"**, and the name comes from the founder's initials: **B**obby **A**nanta **D**ioriza.
 
-🔗 Live: [badai.tech](https://badai.tech)
+🔗 Live: [bad.ai.id](https://bad.ai.id)
 
 The site positions the consultancy ("AI that hits like a storm") and showcases live projects — RAG chatbots, LLM-powered OCR, and privacy-first tools built fast with AI agents.
 
