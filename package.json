@@ -2,6 +2,6 @@
   "name": "badai-tech",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp -r *.html *.png *.ico *.svg *.jpg robots.txt sitemap.xml _headers portfolio dist/ 2>/dev/null || true"
+    "build": "sh scripts/build.sh"
   }
 }
