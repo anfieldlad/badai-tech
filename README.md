@@ -26,7 +26,6 @@ The site positions the consultancy ("AI that hits like a storm") and showcases l
 | `wrangler.json` | Cloudflare Workers config — serves static assets from `./dist`. |
 | `_headers` | Security headers (HSTS, X-Frame-Options, etc.) applied by Cloudflare. |
 | `package.json` | `build` script copies the site files into `dist/`. |
-| `vercel.json` · `middleware.js` | Legacy leftovers from an earlier host; not used by the Cloudflare build. |
 
 ## Adding a portfolio project
 
