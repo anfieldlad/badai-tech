@@ -3,8 +3,5 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp -r *.html *.png *.ico *.svg *.jpg robots.txt sitemap.xml _headers portfolio dist/ 2>/dev/null || true"
-  },
-  "dependencies": {
-    "@vercel/edge": "^0.1.2"
   }
 }
