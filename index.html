@@ -572,7 +572,7 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="border-t border-ink/10 py-10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
         <span class="relative inline-flex items-center justify-center w-6 h-6 rounded bg-ink">
           <span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent"></span>
@@ -583,10 +583,10 @@
       <p class="font-mono text-[11px] text-ink/40 uppercase tracking-tight">
         © <span x-data="{ y: new Date().getFullYear() }" x-text="y"></span> bad.ai · custom AI, built to storm
       </p>
-      <div class="flex items-center gap-5 font-mono text-[11px] uppercase tracking-tight text-ink/50">
-        <a href="https://bobby.dioriza.com" target="_blank" rel="noopener" class="hover:text-ink"><span class="font-bold text-ink">b</span>obby <span class="font-bold text-ink">a</span>nanta <span class="font-bold text-ink">d</span>ioriza</a>
-        <a href="https://github.com/anfieldlad" target="_blank" rel="noopener" class="hover:text-ink">github</a>
-        <a href="https://office.bad.ai.id" target="_blank" rel="noopener" class="hover:text-ink">Behind the scenes ↗</a>
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-0 font-mono text-[11px] uppercase tracking-tight text-ink/50">
+        <a href="https://bobby.dioriza.com" target="_blank" rel="noopener" class="hover:text-ink inline-block whitespace-nowrap leading-5 py-3 md:py-0"><span class="font-bold text-ink">b</span>obby <span class="font-bold text-ink">a</span>nanta <span class="font-bold text-ink">d</span>ioriza</a>
+        <a href="https://github.com/anfieldlad" target="_blank" rel="noopener" class="hover:text-ink inline-block whitespace-nowrap leading-5 py-3 md:py-0">github</a>
+        <a href="https://office.bad.ai.id" target="_blank" rel="noopener" class="hover:text-ink inline-block whitespace-nowrap leading-5 py-3 md:py-0">Behind the scenes ↗</a>
       </div>
     </div>
   </footer>
