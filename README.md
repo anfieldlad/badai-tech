@@ -11,7 +11,7 @@ The site positions the consultancy ("AI that hits like a storm") and showcases l
 - **HTML + [Tailwind CSS](https://tailwindcss.com/)** (via Play CDN) — no build step.
 - **[Alpine.js](https://alpinejs.dev/)** — mobile menu, and the data-driven portfolio grid + modal.
 - **Fonts**: [Manrope](https://fonts.google.com/specimen/Manrope) (geometric sans) + [Space Mono](https://fonts.google.com/specimen/Space+Mono) (mono microcopy) via Google Fonts.
-- **Hosting**: [Vercel](https://vercel.com/) — clean URLs and security headers.
+- **Hosting**: [Cloudflare](https://www.cloudflare.com/) (Workers static assets) — auto-deploys on push to `main`; security headers via `_headers`.
 
 ## Structure
 
@@ -23,8 +23,10 @@ The site positions the consultancy ("AI that hits like a storm") and showcases l
 | `favicon.svg` · `favicon.ico` · `favicon-32.png` · `apple-touch-icon.png` | Logo mark (black square, white **B**, orange dot). |
 | `og.jpg` | 1200×630 social share card (Open Graph / WhatsApp / X). |
 | `robots.txt` · `sitemap.xml` | SEO. |
-| `vercel.json` | `cleanUrls` (serves `/portfolio` instead of `/portfolio.html`). |
-| `middleware.js` | Security headers (HSTS, X-Frame-Options, etc.) via `@vercel/edge`. |
+| `wrangler.json` | Cloudflare Workers config — serves static assets from `./dist`. |
+| `_headers` | Security headers (HSTS, X-Frame-Options, etc.) applied by Cloudflare. |
+| `package.json` | `build` script copies the site files into `dist/`. |
+| `vercel.json` · `middleware.js` | Legacy leftovers from an earlier host; not used by the Cloudflare build. |
 
 ## Adding a portfolio project
 
@@ -52,13 +54,11 @@ python -m http.server 8000
 # → http://localhost:8000
 ```
 
-> **Note:** clean URLs (`/`, `/portfolio`) are a Vercel feature. The local Python server doesn't strip `.html`, so during local preview open `index.html` and `portfolio.html` directly. Everything resolves correctly once deployed.
+> **Note:** clean URLs (`/`, `/portfolio`) are handled by Cloudflare. The local Python server doesn't strip `.html`, so during local preview open `index.html` and `portfolio.html` directly. Everything resolves correctly once deployed.
 
 ## Deployment
 
-Auto-deploys to Vercel on push to `main`. `vercel.json` enables clean URLs and 301-redirects old `.html` paths; `middleware.js` adds security headers.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/anfieldlad/badai-tech&project-name=badai-tech)
+Hosted on Cloudflare. Auto-deploys on push to `main`: the `build` script in `package.json` copies the site into `dist/`, and `wrangler.json` serves `dist/` as static assets. Security headers come from `_headers`.
 
 ## Credits
 
